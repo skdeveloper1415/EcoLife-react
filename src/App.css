@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+#root {
+  font-family: "Poppins", sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  --wihte:#ffffff;
+  --darkGray: #212c21;
+  --gree_color:#239023;
+  --primary: 120 61% 35%;
+  --card-foreground: 120 15% 15%;
+  --gradient-hero: linear-gradient(135deg, hsl(120 61% 35%), hsl(120 45% 45%));
+  --gradient-nature: linear-gradient(135deg, hsl(120 30% 85%), hsl(60 40% 90%));
+  --gradient-accent: linear-gradient(180deg, hsl(60 56% 91%), hsl(45 25% 85%));
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.color_white {
+  color: var(--wihte);
+}
+.navbar a {
+  color: var(--darkGray);
+}
+.footer_nav a {
+  color:var(--wihte) ;
+}
+.text-primary {
+  color: var(--gree_color);
+}
+.bg-gradient-to-r {
+  background: #ffffff;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.7) 61%, rgba(255, 255, 255, 0) 100%);
+}
+.bg-gradient-hero {
+  background: var(--gradient-hero);
+  color: #ffffff;
+}
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--gree_color);
+  border-width: 2px;
+  color: var(--gree_color);
+}
+
+.text-card-foreground {
+  color: hsl(var(--card-foreground));
+}
+
+.btn-outline:hover {
+  background: var(--gradient-hero);
+  border-color: var(--gree_color);
+  border-width: 2px;
+  color: var(--wihte);
+}
+.bg-gradient-accent {
+    background-image: var(--gradient-accent);
+}
+.bg-gradient-nature {
+  background-image: var(--gradient-nature);
+}
+.bg-primary {
+    background-color: hsl(var(--primary));
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
