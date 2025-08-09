@@ -1,7 +1,8 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { Star } from "lucide-react";
+import React from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 const testimonials = [
   {
@@ -40,40 +41,7 @@ const testimonials = [
 
 const Testimonials = () => {
 
-    var settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  };
+    
   return (
     <section className="py-20 bg-gradient-nature">
       <div className="container mx-auto px-6">
@@ -88,12 +56,40 @@ const Testimonials = () => {
         </div>
         
         <div className="max-w-5xl mx-auto">
-
-            <Slider {...settings} className="testimonial-slider">
-      {testimonials.map((testimonial, index) => (
-          <div key={index} className="testimonial-slide px-4">
-            <div className="testimonial-card px-10 border-0 hover:shadow-medium transition-all duration-300 transform hover:scale-105 animate-scale-in bg-card/80 backdrop-blur-sm h-full bg-white rounded-2xl min-h-[350px] flex flex-col justify-center">
-            <div className="testimonial-content space-y-[25px] text-[#000000] text-base font-medium">
+          
+           <Swiper
+        slidesPerView={1}
+        spaceBetween={10}
+        centeredSlides={true}
+        pagination={{
+          clickable: true,
+        }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+          },
+        }}
+        modules={[Autoplay,Pagination]}
+        className="mySwiper"
+        
+      >
+        {testimonials.map((testimonial, index) => (
+          <>
+        <SwiperSlide key={index}><div className="testimonial-card px-10 border-0 hover:shadow-medium transition-all duration-300 transform hover:scale-105 animate-scale-in  md:h-full bg-white rounded-2xl md:min-h-[350px] md:flex md:flex-col justify-center">
+            <div className="testimonial-content space-y-[25px] text-[#000000] text-base font-medium w-full">
                 <div className="rating">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <span key={i} className="star text-[#FBBF24] text-2xl">★</span>
@@ -112,10 +108,11 @@ const Testimonials = () => {
               </div>
               
             </div>
-          </div>
+          </SwiperSlide>
+          
+            </>          
         ))}
-    </Slider>
-        
+      </Swiper>
         </div>
         
         <div className="text-center mt-12 animate-fade-up">
