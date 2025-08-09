@@ -41,7 +41,7 @@ const testimonials = [
 const Testimonials = () => {
 
     var settings = {
-    dots: true,
+    dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 2,
@@ -92,20 +92,20 @@ const Testimonials = () => {
             <Slider {...settings} className="testimonial-slider">
       {testimonials.map((testimonial, index) => (
           <div key={index} className="testimonial-slide px-4">
-            <div className="testimonial-card p-8 border-0 hover:shadow-medium transition-all duration-300 transform hover:scale-105 animate-scale-in bg-card/80 backdrop-blur-sm h-full bg-white rounded-2xl">
-            <div className="testimonial-content">
+            <div className="testimonial-card px-10 border-0 hover:shadow-medium transition-all duration-300 transform hover:scale-105 animate-scale-in bg-card/80 backdrop-blur-sm h-full bg-white rounded-2xl min-h-[350px] flex flex-col justify-center">
+            <div className="testimonial-content space-y-[25px] text-[#000000] text-base font-medium">
                 <div className="rating">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="star">★</span>
+                    <span key={i} className="star text-[#FBBF24] text-2xl">★</span>
                   ))}
                 </div>
                 <p>"{testimonial.content}"</p>
                 
               </div>
-              <div className="testimonial-header">
-                <div className="avatar">{testimonial.avatar}</div>
-                <div className="user-info">
-                  <h3>{testimonial.name}</h3>
+              <div className="testimonial-header mt-6 flex items-center gap-3.5">
+                <div className="avatar bg-[#239023] w-[45px] h-[45px] rounded-full flex items-center justify-center text-white">{testimonial.avatar}</div>
+                <div className="user-info text-[#000000] font-normal text-[13px]">
+                  <h3 className="font-medium text-base">{testimonial.name}</h3>
                   <p className="role">{testimonial.role}</p>
                   <p className="location">{testimonial.location}</p>
                 </div>
@@ -119,7 +119,7 @@ const Testimonials = () => {
         </div>
         
         <div className="text-center mt-12 animate-fade-up">
-          <div className="bg-card/60 backdrop-blur-sm rounded-2xl p-8 max-w-3xl mx-auto shadow-soft">
+          <div className="bg-[#F2F7EE] backdrop-blur-sm rounded-2xl p-8 max-w-3xl mx-auto shadow-soft">
             <h3 className="text-2xl font-bold mb-4">
               Trusted by 50,000+ Eco-Conscious Customers
             </h3>

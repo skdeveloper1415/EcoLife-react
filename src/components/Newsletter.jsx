@@ -7,7 +7,7 @@ const Newsletter = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto p-12 bg-white rounded-2xl text-center border-0 shadow-medium animate-fade-up">
           <div className="mb-8">
-            <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
+            <div className="w-16 h-16 mx-auto mb-6 bg-[#F2F7EE] rounded-full flex items-center justify-center">
               <Mail className="w-8 h-8 text-primary" />
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -24,7 +24,7 @@ const Newsletter = () => {
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="h-12 rounded-xl border-2 text-center sm:text-left"
+                className="h-12 rounded-xl border-2 border-[#D9D9D9] text-center sm:text-left placeholder:text-[12px] placeholder:text-[#737373] p-4"
               />
               <button 
                 type="submit" 

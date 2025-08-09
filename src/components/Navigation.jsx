@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +23,9 @@ const Navigation = () => {
               <a href="/" className="inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium">Contact</a>
               </nav>
           </div>
-          <div>addda</div>
+          <div className="link">
+           <a href="/" className="bg-[#239023] text-[11px] font-medium py-2.5 px-[18px] rounded-[10px] inline-block" >Shop Now</a> 
+          </div>
         </div>
 
        

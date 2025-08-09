@@ -9,28 +9,24 @@ const categories = [
     title: "Sustainable Home",
     description: "Eco-friendly furniture, decor, and household essentials for conscious living.",
     image: sustainableHome,
-    color: "from-green-500 to-emerald-600"
   },
   {
     icon: Shirt,
     title: "Eco Fashion",
     description: "Sustainable clothing made from organic materials and ethical practices.",
     image: ecoProducts,
-    color: "from-emerald-500 to-teal-600"
   },
   {
     icon: Utensils,
     title: "Organic Food",
     description: "Fresh, organic produce and pantry staples for healthy, sustainable eating.",
     image: organicGarden,
-    color: "from-teal-500 to-cyan-600"
   },
   {
     icon: Zap,
     title: "Green Energy",
     description: "Solar panels, energy-efficient appliances, and renewable energy solutions.",
     image: ecoProducts,
-    color: "from-green-600 to-lime-600"
   }
 ];
 
@@ -61,7 +57,7 @@ const FeaturedProducts = () => {
                   alt={category.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className={`absolute inset-0 bg-gradient-to-t ${category.color} opacity-80 group-hover:opacity-70 transition-opacity`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-t opacity-80 group-hover:opacity-70 transition-opacity`}></div>
                 <div className="absolute top-4 left-4">
                   <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                     <category.icon className="w-6 h-6 text-white" />
@@ -85,12 +81,7 @@ const FeaturedProducts = () => {
           ))}
         </div>
         
-        <div className="text-center mt-12 animate-fade-up flex justify-center">
-          <button size="lg" className="flex justify-center items-center">
-            View All Products
-            <ArrowRight className="w-5 h-5" />
-          </button>
-        </div>
+        
       </div>
     </section>
   );

@@ -17,8 +17,8 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center">
-                <Leaf className="w-6 h-6" />
+              <div className="w-10 h-10 bg-[#389A38] rounded-full flex items-center justify-center">
+                <Leaf className="w-6 h-6 text-white" />
               </div>
               <span className="text-2xl font-bold color_white">EcoLife</span>
             </div>
@@ -27,17 +27,17 @@ const Footer = () => {
               Join us in creating a better world, one conscious choice at a time.
             </p>
             <div className="flex gap-3">
-              <button size="icon" className="text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10">
-                <Facebook className="w-5 h-5" />
+              <button size="icon" className="">
+                <Facebook className="w-5 h-5 text-white" />
               </button>
               <button size="icon" className="text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10">
-                <Twitter className="w-5 h-5" />
+                <Twitter className="w-5 h-5 text-white" />
               </button>
               <button  size="icon" className="text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10">
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-5 h-5 text-white" />
               </button>
               <button size="icon" className="text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10">
-                <Youtube className="w-5 h-5" />
+                <Youtube className="w-5 h-5 text-white" />
               </button>
             </div>
           </div>
@@ -88,22 +88,12 @@ const Footer = () => {
                 </span>
               </li>
             </ul>
-
-            <div className="mt-8">
-              <h4 className="font-medium mb-3 color_white">Customer Support</h4>
-              <ul className="space-y-2 text-sm footer_nav">
-                <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Help Center</a></li>
-                <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Shipping Info</a></li>
-                <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Returns</a></li>
-                <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Size Guide</a></li>
-              </ul>
-            </div>
           </div>
         </div>
 
   
 
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-b border-t border-[#54B154] py-8 mt-[118px]">
           <div className="flex flex-wrap gap-6 text-sm text-primary-foreground/80 footer_nav">
             <a href="#" className="hover:text-primary-foreground transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-primary-foreground transition-colors">Terms of Service</a>
@@ -114,12 +104,6 @@ const Footer = () => {
           <div className="text-sm text-primary-foreground/80 color_white">
             © 2024 EcoLife. All rights reserved.
           </div>
-        </div>
-
-        <div className="mt-8 pt-8 border-t border-primary-foreground/20 text-center">
-          <p className="text-sm text-primary-foreground/60 color_white">
-            Certified B-Corp • Carbon Neutral Shipping • 1% of profits donated to environmental causes
-          </p>
         </div>
       </div>
     </footer>

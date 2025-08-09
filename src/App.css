@@ -8,7 +8,7 @@
   --gree_color:#239023;
   --primary: 120 61% 35%;
   --card-foreground: 120 15% 15%;
-  --gradient-hero: linear-gradient(135deg, hsl(120 61% 35%), hsl(120 45% 45%));
+  --gradient-hero: linear-gradient(135deg, #239023, #3fa63f);
   --gradient-nature: linear-gradient(135deg, hsl(120 30% 85%), hsl(60 40% 90%));
   --gradient-accent: linear-gradient(180deg, hsl(60 56% 91%), hsl(45 25% 85%));
 }
@@ -23,6 +23,12 @@
 .color_white {
   color: var(--wihte);
 }
+.slick-slider.testimonial-slider.slick-initialized .slick-list {
+    padding: 40px 0;
+}
+.link a {
+  color: var(--wihte);
+}
 .navbar a {
   color: var(--darkGray);
 }
@@ -31,6 +37,10 @@
 }
 .text-primary {
   color: var(--gree_color);
+}
+.bg-gradient-to-t {
+  background: #3FA63F;
+  background: linear-gradient(90deg, rgba(63, 166, 63, 1) 0%, rgba(35, 144, 35, 1) 100%);
 }
 .bg-gradient-to-r {
   background: #ffffff;
