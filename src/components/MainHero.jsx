@@ -1,4 +1,5 @@
 import React from 'react'
+import { ArrowRight, Leaf } from "lucide-react";
 import heroImage from '../assets/hero-bg.jpg'; // Adjust the path as necessary
 
 const MainHero = () => {
@@ -17,7 +18,7 @@ const MainHero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-up">
             <div className="flex items-center gap-2 text-primary">
-              {/* <Leaf className="w-6 h-6" /> */}
+              <Leaf className="h-8 w-8 text-primary" />
               <span className="text-sm font-medium uppercase tracking-wider">Sustainable Living</span>
             </div>
             
@@ -36,8 +37,9 @@ const MainHero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <button variant="hero" size="xl" className="bg-gradient-hero">
+              <button variant="hero" size="xl" className="bg-gradient-hero flex items-center justify-center">
                 Shop Eco Collection
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button variant="outline" size="xl" className='btn-outline'>
                 Learn More
